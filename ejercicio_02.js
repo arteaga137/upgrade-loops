@@ -92,7 +92,18 @@ const toys = [
     { id: 40, name: 'El gato felix' }
 ];
 
+// definicion de for loop
 
+for(let i = 0; i < toys.length; i++) {
+    // definir condicional para verificar si la propiedad del objeto contiene la palabra "gato"
+    if (toys[i].name.includes("gato")) {
+        // Usar la funcion splice para indicar el indice donde comenzar, y la cantidad de valores a eliminar
+        toys.splice(i,1);
+        // corrijo el indice para no acabar el loop sin revisar el array completamente
+        i--;
+    }
+    console.log(toys);
+}
 /* 
 EJERCICIO 6: (NOTION)
 Usa un bucle **for...of** para recorrer todos los juguetes y añade los que tengan más de 15 ventas (sellCount) al array popularToys. Imprimelo por consola.. Puedes usar este array:
@@ -105,6 +116,15 @@ const toys2 = [
 	{id: 40, name: 'El gato con Guantes', sellCount: 8},
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
+
+for (let toy of toys2) {
+    if (toy.sellCount > 15) {
+        popularToys.push(toy);
+    }
+}
+
+console.log(popularToys);
+
 
 /* 
 EJERCICIO 7: (OPCIONALES)
