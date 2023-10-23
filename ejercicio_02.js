@@ -59,12 +59,26 @@ Usa un bucle forof para recorrer todos los destinos del array. Imprime en un ***
 */
 const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar'];
 
+// Definicion del For...of loop
+
+for (let destination of placesToTravel) {
+    console.log(destination);
+}
+
 /* 
 EJERCICIO 4: (NOTION)
 Usa un **for...in** para imprimir por consola los datos del alienígena.. Puedes usar este objeto:
 */
-const placesToTravel2 = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar'];
+const alien = {
+    name: 'Wormuck',
+    race: 'Cucusumusu',
+    planet: 'Eden',
+    weight: '259kg'
+}
 
+for (let data in alien) {
+    console.log(data + ": " + alien[data]);
+}
 
 /* 
 EJERCICIO 5: (NOTION)
@@ -131,4 +145,6 @@ Se pide:
 
 let n = 15;
 let numeros = newArray();
+
+
 
