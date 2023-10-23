@@ -35,6 +35,24 @@ const alumns = [
     { name: 'Raquel Benito', T1: true, T2: true, T3: true }
 ];
 
+//  iterar sobre cada alumno en el array
+
+for (let i=0; i < alumns.length; i++) {
+    // contar numero de trimestres aprobados
+    let count = 0;
+    if (alumns[i].T1 == true) count++;
+    if (alumns[i].T2 == true) count++;
+    if (alumns[i].T2 == true) count++;
+    // verificar si el alumno tiene 2 trimestres aprobados y agregar variable designando si aprobó o no
+    if (count >= 2) {
+        alumns[i].isApproved = true;
+    } else {
+        alumns[i].isApproved = false;
+    }
+}
+
+console.log(alumns);
+
 /* 
 EJERCICIO 3: (NOTION)
 Usa un bucle forof para recorrer todos los destinos del array. Imprime en un ***console.log*** sus valores.
